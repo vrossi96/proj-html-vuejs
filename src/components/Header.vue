@@ -1,13 +1,15 @@
 <template>
    <div class="container-fluid" id="header">
       <div class="nav row h-100 align-items-center justify-content-between">
+         <!-- Left header with logo -->
          <div class="col flex-grow-0">
-            <img role="button" src="../assets/img/logo-sidearea-1.png" alt="Logo" />
+            <img role="button" src="../assets/images/img/logo-sidearea-1.png" alt="Logo" />
          </div>
+         <!-- RIGHT header with nav -->
          <ul class="col flex-grow-0">
             <li role="button" v-for="item in links" :key="item.name" class="text-uppercase mx-3 d-flex align-items-center">
                <span v-if="!item.img">{{ item.name }}</span>
-               <img v-else :src="require(`../assets/svg/${item.img}`)" :alt="item.name" />
+               <img v-else :src="require(`../assets/images/svg/${item.img}`)" :alt="item.name" />
             </li>
          </ul>
       </div>
