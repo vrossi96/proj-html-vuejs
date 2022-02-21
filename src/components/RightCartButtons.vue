@@ -1,6 +1,6 @@
 <template>
    <div class="cart-buttons">
-      <div><img src="../assets/images/svg/svg-7.svg" alt="Wheel" /></div>
+      <div><img src="../assets/images/svg/svg-4.svg" alt="Wheel" /></div>
       <div><img src="../assets/images/svg/svg-6.svg" alt="Cart" /></div>
    </div>
 </template>
@@ -27,9 +27,6 @@ export default {
    div:first-child {
       background-color: #ef2853;
       margin-bottom: 10px;
-      img {
-         filter: brightness(0) invert(1);
-      }
    }
    div:last-child {
       background-color: #fff;

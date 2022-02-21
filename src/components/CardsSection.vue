@@ -3,7 +3,7 @@
       <div class="row py-5">
          <div v-for="(card, i) in cardsDetails" :key="i" class="col-4 single-card">
             <div class="img-box">
-               <img class="img-fluid" :src="require(`../assets/images/img/h-2-blog-img-${card.img}.jpg`)" alt="" />
+               <img class="img-fluid" :src="require(`../assets/images/img/${card.img}`)" :alt="i" />
                <div class="label">
                   <div class="label-number text-center">
                      <i>{{ card.label.number }}</i>
@@ -33,7 +33,7 @@ export default {
       return {
          cardsDetails: [
             {
-               img: "1",
+               img: "h-2-blog-img-1.jpg",
                details: "This way, loves: a detailed guide through new design",
                author: "Emily Fields",
                label: {
@@ -42,7 +42,7 @@ export default {
                },
             },
             {
-               img: "2",
+               img: "h-2-blog-img-2.jpg",
                details: "I try to give people a different way of looking art",
                author: "Emily Fields",
                label: {
@@ -51,7 +51,7 @@ export default {
                },
             },
             {
-               img: "3",
+               img: "h-2-blog-img-3.jpg",
                details: "Introduce Richard Laperrière of those amazing features",
                author: "Emily Fields",
                label: {
