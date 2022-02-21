@@ -3,8 +3,8 @@
       <div class="row py-5">
          <div v-for="(card, i) in cardsDetails" :key="i" class="col-4 single-card">
             <div class="img-box">
-               <img class="img-fluid" :src="require('../assets/images/img/h-2-blog-img-1.jpg')" :alt="card.img" />
-               <!-- <img class="img-fluid" :src="require(card.img)" alt="" /> -->
+               <!-- <img class="img-fluid" :src="require('../assets/images/img/h-2-blog-img-1.jpg')" :alt="card.img" /> -->
+               <img class="img-fluid" :src="require(`../assets/images/img/h-2-blog-img-${card.img}.jpg`)" alt="" />
                <div class="label">
                   <div class="label-number text-center">
                      <i>{{ card.label.number }}</i>
@@ -34,7 +34,7 @@ export default {
       return {
          cardsDetails: [
             {
-               img: "../assets/images/img/h-2-blog-img-1.jpg",
+               img: "1",
                details: "This way, loves: a detailed guide through new design",
                author: "Emily Fields",
                label: {
@@ -43,7 +43,7 @@ export default {
                },
             },
             {
-               img: "../assets/images/img/h-2-blog-img-2.jpg",
+               img: "2",
                details: "I try to give people a different way of looking art",
                author: "Emily Fields",
                label: {
@@ -52,7 +52,7 @@ export default {
                },
             },
             {
-               img: "../assets/images/img/h-2-blog-img-3.jpg",
+               img: "3",
                details: "Introduce Richard Laperrière of those amazing features",
                author: "Emily Fields",
                label: {
