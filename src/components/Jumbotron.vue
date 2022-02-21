@@ -2,6 +2,11 @@
    <div>
       <div class="row">
          <!-- <div class="col-4 jum-block" :style="{ backgroundImage: `url(${require(test)})` }"></div> non va-->
+         <!-- <div
+            v-for="(image, index) in jumboCards"
+            :key="index"
+            :style="{ backgroundImage: `url(${require('../assets/images/img/' + image.img)})` }"
+         ></div> -->
          <div class="col-4 jum-block" :style="{ backgroundImage: `url(${require('../assets/images/img/h-2-port-img-1.jpg')})` }"></div>
          <div class="col-4 jum-block" :style="{ backgroundImage: `url(${require('../assets/images/img/h-2-port-img-2.jpg')})` }"></div>
          <div class="col-4 jum-block" :style="{ backgroundImage: `url(${require('../assets/images/img/h-2-port-img-3.jpg')})` }"></div>

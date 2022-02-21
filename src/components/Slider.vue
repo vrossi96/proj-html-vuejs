@@ -54,7 +54,7 @@ export default {
          color: #000;
       }
       .p-btn {
-         padding: 15px 30px;
+         padding: 15px 45px;
          border: 2px solid black;
       }
    }

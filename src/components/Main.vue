@@ -3,6 +3,7 @@
       <Slider />
       <Jumbotron />
       <FirstSection />
+      <SecondSection />
       <RightCartButtons />
    </div>
 </template>
@@ -11,6 +12,7 @@
 import Slider from "./Slider.vue";
 import Jumbotron from "./Jumbotron.vue";
 import FirstSection from "./FirstSection.vue";
+import SecondSection from "./SecondSection.vue";
 import RightCartButtons from "./RightCartButtons.vue";
 
 export default {
@@ -19,6 +21,7 @@ export default {
       Slider,
       Jumbotron,
       FirstSection,
+      SecondSection,
       RightCartButtons,
    },
 };
