@@ -37,11 +37,13 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import "../assets/scss/_mixins.scss";
 #header {
    height: 96px;
 
-   // todo remove
-   border-bottom: 1px solid black;
+   span {
+      @include strong-normal-txt;
+   }
 
    ul {
       list-style: none;

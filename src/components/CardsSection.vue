@@ -66,6 +66,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import "../assets/scss/_var.scss";
+
 .single-card {
    i {
       font-family: "American Typewriter", serif;
@@ -79,17 +81,17 @@ export default {
          position: absolute;
          left: 15px;
          top: -15px;
-         box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.33);
+         box-shadow: 3px 10px 10px 0px rgba(0, 0, 0, 0.33);
 
          width: 50px;
          .label-number {
-            background-color: #c0e1cf;
+            background-color: $bg-aqua;
             i {
                font-size: 25px;
             }
          }
          .label-year {
-            background-color: #f3d0c7;
+            background-color: $bg-pink;
             p {
                font-size: 11px;
                font-weight: 600;
@@ -106,12 +108,12 @@ export default {
          .right-triangle {
             right: 0;
             border-width: 0 25px 10px 0;
-            border-color: transparent #f3d0c7 transparent transparent;
+            border-color: transparent $bg-pink transparent transparent;
          }
          .left-triangle {
             left: 0;
             border-width: 10px 25px 0 0;
-            border-color: #f3d0c7 transparent transparent transparent;
+            border-color: $bg-pink transparent transparent transparent;
          }
       }
    }

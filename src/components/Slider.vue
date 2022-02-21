@@ -30,6 +30,9 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import "../assets/scss/_var.scss";
+@import "../assets/scss/_mixins.scss";
+
 .slider {
    border: 1px dashed black;
 
@@ -48,14 +51,17 @@ export default {
 
       // TODO mettere in utils per riutilizzo anche per header
       a {
-         text-decoration: none;
-         font-size: 12px;
-         font-weight: 700;
-         color: #000;
+         @include strong-small-txt;
       }
       .p-btn {
          padding: 15px 45px;
-         border: 2px solid black;
+         border: 2px solid $b-brown;
+         transition: 0.2s linear;
+
+         &:hover {
+            background-color: $bg-brown;
+            color: #fff;
+         }
       }
    }
 

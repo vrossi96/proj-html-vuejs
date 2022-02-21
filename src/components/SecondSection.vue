@@ -20,8 +20,11 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import "../assets/scss/_var.scss";
+@import "../assets/scss/_mixins.scss";
+
 .row {
-   background-color: #faf7f1;
+   background-color: $bg-ylight;
    .col-10 {
       height: 400px;
    }
@@ -36,15 +39,18 @@ export default {
 
    // BTN
    a {
-      text-decoration: none;
-      font-size: 12px;
-      font-weight: 700;
-      color: #000;
-      background-color: #d8f0e3;
+      @include strong-small-txt;
+      background-color: $bg-aqualight;
    }
    .p-btn {
       padding: 15px 45px;
-      border: 2px solid #d8f0e3;
+      border: 2px solid $b-aqualight;
+      transition: 0.2s linear;
+      &:hover {
+         color: #fff;
+         background-color: $bg-brown;
+         border-color: $b-brown;
+      }
    }
 }
 </style>
