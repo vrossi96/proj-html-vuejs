@@ -42,12 +42,13 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import "../assets/scss/_mixins.scss";
+
 .container {
    h2 {
       font-size: 60px;
       i {
-         font-family: "American Typewriter", serif;
-         font-weight: 600;
+         @include coursive-600w;
       }
    }
    .circles-box {

@@ -23,7 +23,6 @@ export default {
    name: "Jumbotron",
    data() {
       return {
-         test: "../assets/images/img/h-2-port-img-1.jpg",
          cardImgPath: "../assets/images/img/",
          jumboCards: [
             { img: "h-2-port-img-1.jpg", title: "Letters", type: "Illustration" },
@@ -35,11 +34,8 @@ export default {
          ],
       };
    },
-   computed: {
-      bgImg() {
-         return this.cane;
-      },
-   },
+   computed: {},
+   mounted() {},
 };
 </script>
 
@@ -62,8 +58,7 @@ export default {
       transition: 0.2s linear;
 
       i {
-         font-family: "American Typewriter", serif;
-         font-weight: 600;
+         @include coursive-600w;
       }
    }
 

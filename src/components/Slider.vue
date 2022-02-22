@@ -82,8 +82,7 @@ export default {
       h1 {
          font-size: 75px;
          i {
-            font-family: "American Typewriter", serif;
-            font-weight: 600;
+            @include coursive-600w;
          }
       }
 
@@ -103,7 +102,7 @@ export default {
       }
    }
 
-   // RIGHT SIDE-IMG SECTION
+   // RIGHT SIDE-IMG SECTION AND DECORATIONS
    .img-slider {
       position: relative;
       img {

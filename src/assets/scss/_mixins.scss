@@ -12,6 +12,11 @@
    color: #000;
 }
 
+@mixin coursive-600w {
+   font-family: "American Typewriter", serif;
+   font-weight: 600;
+}
+
 // SIZE
 @mixin eq-size($size) {
    height: $size;

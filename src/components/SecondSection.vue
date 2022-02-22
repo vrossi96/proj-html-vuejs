@@ -109,8 +109,7 @@ export default {
    h2 {
       font-size: 60px;
       i {
-         font-family: "American Typewriter", serif;
-         font-weight: 600;
+         @include coursive-600w;
       }
    }
 

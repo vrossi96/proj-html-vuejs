@@ -66,12 +66,12 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import "../assets/scss/_mixins.scss";
 @import "../assets/scss/_var.scss";
 
 .single-card {
    i {
-      font-family: "American Typewriter", serif;
-      font-weight: 600;
+      @include coursive-600w;
    }
 
    .img-box {
