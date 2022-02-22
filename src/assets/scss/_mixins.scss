@@ -18,6 +18,13 @@
    width: $size;
 }
 
+// POSITIONS FLEX
+@mixin flex-center {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
 // EQUAL DISTANCE
 @mixin equal-distance-rb($distance) {
    right: $distance;

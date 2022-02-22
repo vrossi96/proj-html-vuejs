@@ -1,5 +1,6 @@
 <template>
-   <div>
+   <div class="d-flex align-items-center position-relative">
+      <div role="button" class="left-arrow"><i class="fas fa-angle-left"></i></div>
       <div class="slider container">
          <div class="row">
             <!-- Left side TEXT AREA -->
@@ -27,6 +28,12 @@
             </div>
          </div>
       </div>
+      <div role="button" class="right-arrow"><i class="fas fa-angle-right"></i></div>
+      <div class="dots-container d-flex align-items-center">
+         <div role="button" class="dot"></div>
+         <div role="button" class="dot"></div>
+         <div role="button" class="dot"></div>
+      </div>
    </div>
 </template>
 
@@ -40,15 +47,37 @@ export default {
 @import "../assets/scss/_var.scss";
 @import "../assets/scss/_mixins.scss";
 
+[class*="fa-angle-"] {
+   color: white;
+   @include flex-center;
+   @include eq-size(30px);
+   font-size: 20px;
+   border-radius: 50%;
+   background-color: $bg-brown;
+}
+
+.dots-container {
+   position: absolute;
+   bottom: 20px;
+   left: 50%;
+   transform: translateX(-50%);
+
+   .dot {
+      @include eq-size(10px);
+      border-radius: 50%;
+      background-color: $bg-brown;
+      margin: 0 5px;
+      &:hover {
+         transform: scale(1.5);
+      }
+   }
+}
+
 .slider {
-   border: 1px dashed black;
    margin-top: 50px;
    margin-bottom: 40px;
 
    .col-5 {
-      border: 1px dotted red;
-      // height: 500px;
-
       // LEFT SIDE-TEXT SECTION
       h1 {
          font-size: 75px;
