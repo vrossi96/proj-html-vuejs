@@ -52,6 +52,9 @@ export default {
    }
    .circles-box {
       position: relative;
+      p {
+         padding: 0 10px;
+      }
 
       div:nth-of-type(1) {
          i {

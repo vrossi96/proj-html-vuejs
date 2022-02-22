@@ -1,6 +1,5 @@
 <template>
    <div>
-      <div>im</div>
       <div class="slider container">
          <div class="row">
             <!-- Left side TEXT AREA -->
