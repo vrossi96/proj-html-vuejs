@@ -1,14 +1,14 @@
 <template>
    <div class="d-flex align-items-center position-relative">
-      <div role="button" class="left-arrow"><i class="fas fa-angle-left"></i></div>
+      <div role="button" class="left-arrow" @click="prevImg"><i class="fas fa-angle-left"></i></div>
       <div class="slider container">
-         <div class="row">
+         <!-- CONTENT SLIDER -->
+         <div v-for="(item, index) in slider" :key="index" class="row">
             <!-- Left side TEXT AREA -->
             <div class="col-5 offset-1 d-flex flex-column justify-content-center">
                <h1>Devotion that never <i>ends</i></h1>
                <p class="text-secondary py-4">
-                  Aperiam, similique earum. Illo alias accusamus corrupti magni quibusdam autem odio nihil. Odio eius pariatur consectetur voluptas
-                  voluptates placeat reprehenderit laudantium repellat!
+                  {{ item.text }}
                </p>
                <div>
                   <a class="p-btn text-uppercase" href="#">Read more</a>
@@ -16,8 +16,7 @@
             </div>
             <!-- RIGHT side IMG AREA -->
             <div class="img-slider col-5 offset-1 d-flex align-items-center justify-content-center">
-               <img src="../assets/images/img/h-2-slider-img-15.png" alt="" />
-               <img src="../assets/images/img/h-2-slider-img-16.png" alt="" />
+               <img v-for="image in item.img" :key="image" :src="require('../assets/images/img/' + image)" alt="" />
                <!-- decorations -->
                <img class="decorations-1" src="../assets/images/img/short-slider-rev-1-img-2.png" alt="Flower" />
                <img class="decorations-2" src="../assets/images/img/h-2-slider-img-14.png" alt="Flower" />
@@ -28,7 +27,7 @@
             </div>
          </div>
       </div>
-      <div role="button" class="right-arrow"><i class="fas fa-angle-right"></i></div>
+      <div role="button" class="right-arrow" @click="nextImg"><i class="fas fa-angle-right"></i></div>
       <div class="dots-container d-flex align-items-center">
          <div role="button" class="dot"></div>
          <div role="button" class="dot"></div>
@@ -40,6 +39,18 @@
 <script>
 export default {
    name: "Slider",
+   data() {
+      return {
+         slideNow: 0,
+         slider: [
+            {
+               text: "Aperiam, similique earum. Illo alias accusamus corrupti magni quibusdam autem odio nihil. Odio eius pariatur consectetur voluptas voluptates placeat reprehenderit laudantium repellat!",
+               img: ["h-2-slider-img-15.png", "h-2-slider-img-16.png"],
+            },
+         ],
+      };
+   },
+   methods: {},
 };
 </script>
 
