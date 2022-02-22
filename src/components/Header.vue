@@ -38,11 +38,28 @@ export default {
 
 <style scoped lang="scss">
 @import "../assets/scss/_mixins.scss";
+@import "../assets/scss/_var.scss";
+
 #header {
    height: 96px;
 
    span {
       @include strong-normal-txt;
+      position: relative;
+
+      &::before {
+         content: "";
+         display: none;
+         position: absolute;
+         bottom: 5px;
+         width: 105%;
+         height: 8px;
+         z-index: -1;
+         background-color: $bg-pink;
+      }
+      &:hover::before {
+         display: inline-block;
+      }
    }
 
    ul {
