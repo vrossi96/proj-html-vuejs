@@ -1,3 +1,4 @@
+// TEXTS
 @mixin strong-small-txt {
    text-decoration: none;
    font-size: 12px;
@@ -9,4 +10,16 @@
    font-size: 16px;
    font-weight: 700;
    color: #000;
+}
+
+// SIZE
+@mixin eq-size($size) {
+   height: $size;
+   width: $size;
+}
+
+// EQUAL DISTANCE
+@mixin equal-distance-rb($distance) {
+   right: $distance;
+   bottom: $distance;
 }

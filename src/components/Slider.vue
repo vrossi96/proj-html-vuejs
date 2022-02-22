@@ -1,5 +1,6 @@
 <template>
    <div>
+      <div>im</div>
       <div class="slider container">
          <div class="row">
             <!-- Left side TEXT AREA -->
@@ -17,6 +18,13 @@
             <div class="img-slider col-5 offset-1 d-flex align-items-center justify-content-center">
                <img src="../assets/images/img/h-2-slider-img-15.png" alt="" />
                <img src="../assets/images/img/h-2-slider-img-16.png" alt="" />
+               <!-- decorations -->
+               <img class="decorations-1" src="../assets/images/img/short-slider-rev-1-img-2.png" alt="Flower" />
+               <img class="decorations-2" src="../assets/images/img/h-2-slider-img-14.png" alt="Flower" />
+               <img class="decorations-3" src="../assets/images/img/short-slider-rev-1-img-6.png" alt="Flower" />
+               <img class="decorations-4" src="../assets/images/img/h-2-slider-img-17.png" alt="Flower" />
+               <img class="decorations-5" src="../assets/images/img/h-2-slider-img-13.png" alt="Flower" />
+               <img class="decorations-6" src="../assets/images/img/h-2-slider-img-12.png" alt="Flower" />
             </div>
          </div>
       </div>
@@ -35,6 +43,8 @@ export default {
 
 .slider {
    border: 1px dashed black;
+   margin-top: 50px;
+   margin-bottom: 40px;
 
    .col-5 {
       border: 1px dotted red;
@@ -67,8 +77,47 @@ export default {
 
    // RIGHT SIDE-IMG SECTION
    .img-slider {
+      position: relative;
       img {
          height: 80%;
+      }
+
+      // DECORATIONS
+      [class*="decorations"] {
+         position: absolute;
+         z-index: -1;
+      }
+      .decorations-1,
+      .decorations-2,
+      .decorations-3 {
+         height: 60px;
+      }
+      .decorations-1 {
+         top: 25px;
+         left: -40px;
+      }
+      .decorations-2 {
+         top: 0;
+         right: 0;
+      }
+      .decorations-3 {
+         top: 100px;
+         right: -55px;
+      }
+      .decorations-4 {
+         height: 120px;
+         bottom: 45px;
+         right: -100px;
+      }
+      .decorations-5 {
+         height: 75px;
+         bottom: 45px;
+         left: -50px;
+      }
+      .decorations-6 {
+         height: 40px;
+         bottom: 230px;
+         left: -75px;
       }
    }
 }

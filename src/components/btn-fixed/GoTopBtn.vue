@@ -12,17 +12,16 @@ export default {
 
 <style scoped lang="scss">
 @import "../../assets/scss/_var.scss";
+@import "../../assets/scss/_mixins.scss";
 
 .go-on-top {
    position: fixed;
-   right: 20px;
-   bottom: 20px;
+   @include equal-distance-rb(20px);
    a {
       display: flex;
       justify-content: center;
       padding: 10px;
-      height: 40px;
-      width: 40px;
+      @include eq-size(40px);
       background-color: $bg-aqua;
    }
 }
