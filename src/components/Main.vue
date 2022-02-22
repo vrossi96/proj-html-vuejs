@@ -5,6 +5,7 @@
       <FirstSection />
       <SecondSection />
       <RightCartButtons />
+      <GoTopBtn />
       <CardsSection />
    </div>
 </template>
@@ -14,7 +15,8 @@ import Slider from "./Slider.vue";
 import Jumbotron from "./Jumbotron.vue";
 import FirstSection from "./FirstSection.vue";
 import SecondSection from "./SecondSection.vue";
-import RightCartButtons from "./RightCartButtons.vue";
+import RightCartButtons from "./btn-fixed/RightCartButtons.vue";
+import GoTopBtn from "./btn-fixed/GoTopBtn.vue";
 import CardsSection from "./CardsSection.vue";
 
 export default {
@@ -25,6 +27,7 @@ export default {
       FirstSection,
       SecondSection,
       RightCartButtons,
+      GoTopBtn,
       CardsSection,
    },
 };

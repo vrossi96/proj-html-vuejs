@@ -1,7 +1,7 @@
 <template>
    <div class="cart-buttons">
-      <div><img src="../assets/images/svg/svg-4.svg" alt="Wheel" /></div>
-      <div><img src="../assets/images/svg/svg-6.svg" alt="Cart" /></div>
+      <div><img src="../../assets/images/svg/svg-4.svg" alt="Wheel" /></div>
+      <div><img src="../../assets/images/svg/svg-6.svg" alt="Cart" /></div>
    </div>
 </template>
 
