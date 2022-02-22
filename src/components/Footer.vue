@@ -3,25 +3,11 @@
       <div class="container">
          <div class="row">
             <div class="col-12 d-flex justify-content-between align-items-center">
-               <div class="footer-section">
-                  <img src="../assets/images/img/logo-sidearea-1.png" alt="" />
-                  <p>Let's get creative</p>
-               </div>
-               <div class="footer-section">
-                  <p>maree.qode@gmail.com</p>
-                  <p>+44645 321 789</p>
-               </div>
-               <div class="footer-section">
-                  <p>Avenue d'Auderghem 10</p>
-                  <p>1040 Brussels, Belgium</p>
-               </div>
-               <div class="footer-section">
-                  <p>Stay in touch with us</p>
-                  <div class="d-flex justify-content-between">
-                     <i role="button" class="fab fa-twitter"></i>
-                     <i role="button" class="fab fa-pinterest-p"></i>
-                     <i role="button" class="fab fa-facebook-f"></i>
-                     <i role="button" class="fab fa-linkedin-in"></i>
+               <div v-for="(comp, i) in footerMenu" :key="i" class="footer-section">
+                  <img v-if="comp.img" :src="require('../assets/images/img/' + comp.img)" />
+                  <p v-for="tex in comp.text" :key="tex">{{ tex }}</p>
+                  <div v-if="comp.icons" class="d-flex justify-content-between">
+                     <i v-for="icon in comp.icons" :key="icon" role="button" class="fab" :class="icon"></i>
                   </div>
                </div>
             </div>
@@ -33,6 +19,16 @@
 <script>
 export default {
    name: "Footer",
+   data() {
+      return {
+         footerMenu: [
+            { img: "logo-sidearea-1.png", text: ["Let's get creative"], icons: [] },
+            { img: "", text: ["maree.qode@gmail.com", "+44645 321 789"], icons: [] },
+            { img: "", text: ["Avenue d'Auderghem 10", "1040 Brussels, Belgium"], icons: [] },
+            { img: "", text: ["Stay in touch with us"], icons: ["fa-twitter", "fa-pinterest-p", "fa-facebook-f", "fa-linkedin-in"] },
+         ],
+      };
+   },
 };
 </script>
 
